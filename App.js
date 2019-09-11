@@ -1,5 +1,5 @@
-import React, {Fragment} from 'react';
-import AppleHealthKit from '@track-info/rn-health-kit';
+import React, { Fragment } from 'react';
+import { getHealthData } from './health-kit'
 import {
   SafeAreaView,
   StyleSheet,
@@ -8,7 +8,6 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-
 import {
   Header,
   LearnMoreLinks,
@@ -18,7 +17,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
-  console.log('AppleHealthKit', AppleHealthKit);
+  getHealthData()
 
   return (
     <Fragment>
