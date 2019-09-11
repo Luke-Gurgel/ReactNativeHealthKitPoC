@@ -20,6 +20,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* HealthKitPocTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HealthKitPocTests.m */; };
 		3D5B309E7703E843A905F448 /* libPods-HealthKitPoc-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A85E5A53C502B9D290C839 /* libPods-HealthKitPoc-tvOSTests.a */; };
 		7FF284AAF4EACA32788E54B0 /* libPods-HealthKitPocTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E00FAE1DE50FBB9EAD1F63E /* libPods-HealthKitPocTests.a */; };
+		A3D8DB922328741D00C17847 /* libRCTAppleHealthKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D8DB912328718A00C17847 /* libRCTAppleHealthKit.a */; };
+		A3D8DB97232876D300C17847 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D8DB96232876D300C17847 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "HealthKitPoc-tvOS";
+		};
+		A3D8DB902328718A00C17847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D8DB8C2328718A00C17847 /* RCTAppleHealthKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3774C88D1D2092F20000B3F3;
+			remoteInfo = RCTAppleHealthKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -59,6 +68,9 @@
 		80B5EEC570C7DA380990C02B /* Pods-HealthKitPoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKitPoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKitPoc/Pods-HealthKitPoc.debug.xcconfig"; sourceTree = "<group>"; };
 		8448C5C2652430B0F56A7E8F /* Pods-HealthKitPoc-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKitPoc-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKitPoc-tvOS/Pods-HealthKitPoc-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		8E00FAE1DE50FBB9EAD1F63E /* libPods-HealthKitPocTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthKitPocTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3D8DB8C2328718A00C17847 /* RCTAppleHealthKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAppleHealthKit.xcodeproj; path = "../node_modules/rn-apple-healthkit/RCTAppleHealthKit.xcodeproj"; sourceTree = "<group>"; };
+		A3D8DB93232874CD00C17847 /* HealthKitPoc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = HealthKitPoc.entitlements; path = HealthKitPoc/HealthKitPoc.entitlements; sourceTree = "<group>"; };
+		A3D8DB96232876D300C17847 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		A6AFBAAC6ECF3CA5F8A60529 /* Pods-HealthKitPocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKitPocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKitPocTests/Pods-HealthKitPocTests.release.xcconfig"; sourceTree = "<group>"; };
 		A991A261D4344BD71875DA0D /* Pods-HealthKitPoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKitPoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKitPoc/Pods-HealthKitPoc.release.xcconfig"; sourceTree = "<group>"; };
 		BCBD39407EFD5C9B2473457F /* libPods-HealthKitPoc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthKitPoc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D8DB97232876D300C17847 /* HealthKit.framework in Frameworks */,
+				A3D8DB922328741D00C17847 /* libRCTAppleHealthKit.a in Frameworks */,
 				09CAD04B0917FB4DDBDE1944 /* libPods-HealthKitPoc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +139,7 @@
 		13B07FAE1A68108700A75B9A /* HealthKitPoc */ = {
 			isa = PBXGroup;
 			children = (
+				A3D8DB93232874CD00C17847 /* HealthKitPoc.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -139,6 +154,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3D8DB96232876D300C17847 /* HealthKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				BCBD39407EFD5C9B2473457F /* libPods-HealthKitPoc.a */,
@@ -152,6 +168,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A3D8DB8C2328718A00C17847 /* RCTAppleHealthKit.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -195,6 +212,14 @@
 				A6AFBAAC6ECF3CA5F8A60529 /* Pods-HealthKitPocTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A3D8DB8D2328718A00C17847 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3D8DB912328718A00C17847 /* libRCTAppleHealthKit.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +316,14 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = NWHFT8X67Q;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -307,12 +340,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A3D8DB8D2328718A00C17847 /* Products */;
+					ProjectRef = A3D8DB8C2328718A00C17847 /* RCTAppleHealthKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* HealthKitPoc */,
@@ -322,6 +362,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A3D8DB912328718A00C17847 /* libRCTAppleHealthKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTAppleHealthKit.a;
+			remoteRef = A3D8DB902328718A00C17847 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -625,8 +675,10 @@
 			baseConfigurationReference = 80B5EEC570C7DA380990C02B /* Pods-HealthKitPoc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthKitPoc/HealthKitPoc.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = NWHFT8X67Q;
 				INFOPLIST_FILE = HealthKitPoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -634,7 +686,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Luke-Gurgel.HealthKitPoc";
 				PRODUCT_NAME = HealthKitPoc;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -645,7 +697,9 @@
 			baseConfigurationReference = A991A261D4344BD71875DA0D /* Pods-HealthKitPoc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthKitPoc/HealthKitPoc.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NWHFT8X67Q;
 				INFOPLIST_FILE = HealthKitPoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -653,7 +707,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Luke-Gurgel.HealthKitPoc";
 				PRODUCT_NAME = HealthKitPoc;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
