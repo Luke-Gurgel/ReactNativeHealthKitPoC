@@ -1,12 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Fragment} from 'react';
+import AppleHealthKit from '@track-info/rn-health-kit';
 import {
   SafeAreaView,
   StyleSheet,
@@ -25,6 +18,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
+  console.log('AppleHealthKit', AppleHealthKit);
+
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
