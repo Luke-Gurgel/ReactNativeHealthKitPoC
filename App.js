@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { getHealthData } from './health-kit'
 import {
   SafeAreaView,
@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
   Text,
   StatusBar,
+  NativeEventEmitter,
+  NativeModules
 } from 'react-native';
 import {
   Header,
@@ -17,7 +19,20 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+const { HKManager }  = NativeModules
+
 const App = () => {
+  const hkManagerEmitter = new NativeEventEmitter(HKManager)
+  const subscription = hkManagerEmitter.addListener('HK_CYCLING', (cyclingData) => {
+    console.log('cycling data background delivery:', cyclingData)
+  })
+
+  useEffect(() => {
+    return function cleanup() {
+      subscription.remove()
+    }
+  })
+
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />

@@ -12,6 +12,7 @@
 #import <React/RCTRootView.h>
 #import <React/RCTEventEmitter.h>
 #import <HealthKit/HealthKit.h>
+#import "HKManager.h"
 
 @implementation AppDelegate
 
@@ -46,6 +47,8 @@
 
     if (hasAccessToCycling) {
       NSLog(@"We have access to cycling, setting up queries and enabling background delivery");
+      
+      HKManager *hkManager = [HKManager allocWithZone: nil];
 
       HKAnchoredObjectQuery *cyclingAnchoredQuery = [[HKAnchoredObjectQuery alloc] initWithType: cyclingSampleType predicate: nil anchor: HKAnchoredObjectQueryNoAnchor limit: HKObjectQueryNoLimit resultsHandler: ^(HKAnchoredObjectQuery * _Nonnull query, NSArray<__kindof HKSample *> * _Nullable sampleObjects, NSArray<HKDeletedObject *> * _Nullable deletedObjects, HKQueryAnchor * _Nullable newAnchor, NSError * _Nullable error) {
         if (error) {
@@ -73,23 +76,15 @@
           NSLog(@"Could not set up anchored query for cycling: %@", error.localizedDescription);
           abort();
         }
-
+        
         NSLog(@"Results from the anchored query updateHandler");
 
         if (addedObjects) {
-          for (HKQuantitySample *sample in addedObjects) {
-            if (@available(iOS 12.0, *)) { NSLog(@"count: %ld", (long)sample.count); } // 1 how many quantities are there in this HKQuantitySample
-            NSLog(@"UUID: %@", sample.UUID);
-            NSLog(@"sampleType: %@", sample.sampleType); // HKQuantityTypeIdentifierDistanceCycling
-            NSLog(@"quantity: %@", sample.quantity); // 2 mi
-            NSLog(@"startDate: %@", sample.startDate); // Fri Sep 13 14:06:00 2019
-            NSLog(@"endDate: %@", sample.endDate); // Fri Sep 13 14:06:00 2019
-            NSLog(@"metadata: %@", sample.metadata); // { HKWasUserEntered = 1 }
-          }
+          [hkManager cyclingDataDidChange: addedObjects];
         }
 
         if (deletedObjects) {
-          NSLog(@"cycling deleted samples: %@", deletedObjects);
+          // NSLog(@"cycling deleted samples: %@", deletedObjects);
         }
       };
 

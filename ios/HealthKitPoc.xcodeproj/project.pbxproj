@@ -20,6 +20,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* HealthKitPocTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HealthKitPocTests.m */; };
 		3D5B309E7703E843A905F448 /* libPods-HealthKitPoc-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A85E5A53C502B9D290C839 /* libPods-HealthKitPoc-tvOSTests.a */; };
 		7FF284AAF4EACA32788E54B0 /* libPods-HealthKitPocTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E00FAE1DE50FBB9EAD1F63E /* libPods-HealthKitPocTests.a */; };
+		A3CB8A2E2330054C0044A633 /* HKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CB8A2D2330054C0044A633 /* HKManager.m */; };
 		A3D8DB922328741D00C17847 /* libRCTAppleHealthKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D8DB912328718A00C17847 /* libRCTAppleHealthKit.a */; };
 		A3D8DB97232876D300C17847 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D8DB96232876D300C17847 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,8 @@
 		80B5EEC570C7DA380990C02B /* Pods-HealthKitPoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKitPoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKitPoc/Pods-HealthKitPoc.debug.xcconfig"; sourceTree = "<group>"; };
 		8448C5C2652430B0F56A7E8F /* Pods-HealthKitPoc-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKitPoc-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKitPoc-tvOS/Pods-HealthKitPoc-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		8E00FAE1DE50FBB9EAD1F63E /* libPods-HealthKitPocTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthKitPocTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3CB8A2C2330054C0044A633 /* HKManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKManager.h; sourceTree = "<group>"; };
+		A3CB8A2D2330054C0044A633 /* HKManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKManager.m; sourceTree = "<group>"; };
 		A3D8DB8C2328718A00C17847 /* RCTAppleHealthKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAppleHealthKit.xcodeproj; path = "../node_modules/rn-apple-healthkit/RCTAppleHealthKit.xcodeproj"; sourceTree = "<group>"; };
 		A3D8DB93232874CD00C17847 /* HealthKitPoc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = HealthKitPoc.entitlements; path = HealthKitPoc/HealthKitPoc.entitlements; sourceTree = "<group>"; };
 		A3D8DB96232876D300C17847 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -147,6 +150,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				A3CB8A2C2330054C0044A633 /* HKManager.h */,
+				A3CB8A2D2330054C0044A633 /* HKManager.m */,
 			);
 			name = HealthKitPoc;
 			sourceTree = "<group>";
@@ -581,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				A3CB8A2E2330054C0044A633 /* HKManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
