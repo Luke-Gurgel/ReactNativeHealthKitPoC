@@ -5,6 +5,7 @@ import {
   StyleSheet,
   ScrollView,
   View,
+  TouchableOpacity,
   Text,
   StatusBar,
 } from 'react-native';
@@ -17,8 +18,6 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
-  getHealthData()
-
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
@@ -32,7 +31,10 @@ const App = () => {
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
-          <View style={styles.body}>
+          <View style={ styles.body }>
+            <TouchableOpacity onPress={getHealthData} style={styles.initBtn}>
+              <Text style={styles.sectionTitle}>Init HealthKit</Text>
+            </TouchableOpacity>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
@@ -67,6 +69,13 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
+  initBtn: {
+    alignSelf: 'center',
+    marginTop: 20,
+    padding: 12,
+    backgroundColor: 'lightgray',
+    borderRadius: 10,
+  },
   scrollView: {
     backgroundColor: Colors.lighter,
   },
